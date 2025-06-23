@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Interpolação de Newton</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type='number'] {
+      width: 60px;
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+    table, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h2>INTERPOLAÇÃO DE NEWTON</h2>
+
+  <label>Número de pontos: <input type="number" id="numPontos" min="2" value="3"></label>
+  <button onclick="gerarTabela()">GERAR</button>
+
+  <div id="entrada"></div>
+  <button onclick="calcular()">CALCULAR</button>
+  <pre id="saida"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>

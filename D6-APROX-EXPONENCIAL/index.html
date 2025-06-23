@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aproximação Exponencial - MMQ</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    input[type='number'] {
+      width: 60px;
+      appearance: textfield;
+    }
+    table, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Aproximação Exponencial por MMQ</h2>
+
+  <label>Número de pontos: <input type="number" id="numPontos" min="2" value="3"></label><br><br>
+<p style="color: darkred; font-weight: bold;">
+  Obs: Os valores de f(x) devem ser maiores que zero. O logaritmo natural não está definido para zero ou negativos.
+</p>
+<button onclick="gerarTabela()">GERAR</button>
+
+
+  <div id="entrada"></div>
+  <button onclick="calcularExponencial()">CALCULAR</button>
+  <pre id="saida"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>

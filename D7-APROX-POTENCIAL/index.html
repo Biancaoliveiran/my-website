@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajuste Potencial - MMQ</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    input[type='number'] {
+      width: 60px;
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+    table, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Ajuste de Função Potencial - MMQ</h2>
+
+  <label>Número de pontos: <input type="number" id="numPontos" min="2" value="3"></label>
+  <button onclick="gerarTabela()">GERAR</button>
+
+  <div id="entrada"></div>
+  <button onclick="calcularPotencial()">CALCULAR POTENCIAL</button>
+  <pre id="saida"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>

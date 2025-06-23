@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resolução de PVI - Método de Euler</title>
+    <script src="euler.js"></script>
+</head>
+<body>
+    <h2>RESOLUÇÃO DE PVI DE ORDEM 1 - MÉTODO DE EULER</h2>
+
+    <label>Função g(x,y):</label>
+    <input type="text" id="gx" placeholder="Ex: x + y"><br><br>
+
+    <label>x0:</label>
+    <input type="number" id="x0" step="any">
+    <label>y0:</label>
+    <input type="number" id="y0" step="any"><br><br>
+
+    <label>xn (valor final de x):</label>
+    <input type="number" id="xn" step="any"><br><br>
+
+    <label>Intervalo h:</label>
+    <input type="number" id="h" step="any"><br><br>
+
+    <button onclick="resolverEuler()">CALCULAR</button>
+
+    <h3>Resultado:</h3>
+    <table border="1" id="resultado">
+        <tr>
+            <th>i</th>
+            <th>x(i)</th>
+            <th>y(i)</th>
+        </tr>
+    </table>
+</body>
+</html>

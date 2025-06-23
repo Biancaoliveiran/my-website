@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio D.9 - Regra dos Trapézios com Função</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }  //FONTE DO TEXTO
+    input[type='number'], input[type='text'] {    //REMOVE OU COLOC SETINHA SPRA MUDAR O NUMERO, PARA TER SETINHAS REMOVE O TYPE NUMBER
+      width: 100px;
+      -moz-appearance: textfield;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>  
+  <h2>Desafio D.9 - Regra dos Trapézios com Função Analítica</h2>
+  <label>Função f(x): <input type="text" id="funcao" value="x*x"></label><br><br>
+  <label>Intervalo a: <input type="number" id="a" value="0"> </label>
+  <label>Intervalo b: <input type="number" id="b" value="1"> </label>
+  <label>n: <input type="number" id="n" value="4"> </label>
+  <button onclick="calcular()">CALCULAR INTEGRAL</button>     
+  <pre id="saida"></pre>   
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">  //IDIOMA
+<head>
+  <meta charset="UTF-8">    //garante que os caracteres acentuados sejam exibidos corretO
+  <title>Derivadas Centrais - VTPCNUM</title>
+  <style>
+    body {   //Define o estilo geral do corpo da página
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;   //CODIGO FUNDO CINZA
+      color: #333;
+    }
+    h2 {
+      background-color: #007BFF;   ;;CODIGO FUNDO AZUL
+      color: white;
+      padding: 10px;   //Espaçamento interno
+      border-radius: 6px;   //Bordas
+    }
+    label {
+      font-weight: bold;   //rótulos dos campos aparecerão em negrito.
+    }
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px;
+      background-color: #28A745;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>DERIVAÇÃO NUMÉRICA - DIFERENÇAS CENTRAIS</h2>
+
+  <label>FUNÇÃO f(x):</label><br>
+  <input type="text" id="fx" value="4*Math.pow(x,2)" size="30"><br>
+
+  <label>Ponto x₀:</label><br>
+  <input type="number" id="x0" value="3"><br>
+
+  <label>Intervalo h:</label><br>
+  <input type="number" id="h" value="0.01" step="0.001"><br>
+
+  <button onclick="calcular()">CALCULAR</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcular() {
+      let fxInput = document.getElementById("fx").value;
+      let x0 = parseFloat(document.getElementById("x0").value);
+      let h = parseFloat(document.getElementById("h").value);
+
+      let f = function(x) {
+        try {
+          return eval(fxInput);
+        } catch {
+          return NaN;
+        }
+      };
+
+      let f_x0 = f(x0);
+      let f_xph = f(x0 + h);
+      let f_xmh = f(x0 - h);
+
+      let df_asc = (f_xph - f_x0) / h;
+      let df_desc = (f_x0 - f_xmh) / h;
+      let df_cent = (f_xph - f_xmh) / (2 * h);
+      let d2f_cent = (f_xph - 2 * f_x0 + f_xmh) / (h * h);
+
+      let saida = `
+        <h3>Resultados:</h3>
+        <strong>f(x):</strong> ${fxInput}<br>
+        <strong>x₀:</strong> ${x0} | <strong>h:</strong> ${h}<br><br>
+        <strong>1ª derivada por diferença ASCENDENTE:</strong> ${df_asc.toFixed(6)}<br>
+        <strong>1ª derivada por diferença DESCENDENTE:</strong> ${df_desc.toFixed(6)}<br>
+        <strong>1ª derivada por diferença CENTRAL:</strong> ${df_cent.toFixed(6)}<br><br>
+        <strong>2ª derivada por diferença CENTRAL:</strong> ${d2f_cent.toFixed(6)}
+      `;
+
+      document.getElementById("resultado").innerHTML = saida;
+    }
+  </script>
+</body>
+</html>

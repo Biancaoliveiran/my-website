@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">     
+    <title>Método da Falsa Posição</title>
+    <style>   //Tabela com bordas e cores
+        body {
+            font-family: Arial, sans-serif;   //fonte
+            padding: 20px;
+            background-color: #f9f9f9;   //Cor cinza quase branco.
+        }
+        input, button {
+            font-size: 16px;
+            margin: 5px 0;
+            padding: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #444;   //Usado para as bordas da tabela
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;   //fundo azul realce de cabeçalho
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Método da Falsa Posição</h2>
+    <label>FUNÇÃO f(x):</label><br>
+    <input type="text" id="funcao" value="Math.pow(x,3)-20"><br>
+    <label>a (xa):</label><br>
+    <input type="number" id="a" value="2"><br>
+    <label>b (xb):</label><br>
+    <input type="number" id="b" value="3"><br>
+    <label>Convergência alvo (ea):</label><br>
+    <input type="text" id="ea" value="0.001"><br>
+    <label>Máximo de iterações:</label><br>
+    <input type="number" id="max_iter" value="50"><br><br>
+
+    <button onclick="falsaPosicao()">CALCULAR</button>
+
+    <h3>Resultado:</h3>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Iteração</th>
+                <th>xa</th>
+                <th>xb</th>
+                <th>xm</th>
+                <th>Erro |f(xm)|</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="falsa_posicao_.js"></script>
+</body>
+</html>

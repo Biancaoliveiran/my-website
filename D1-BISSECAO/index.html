@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">  
+<head>
+    <meta charset="UTF-8">   
+    <title>Método da Bissecção</title>
+    <script src="bissecao.js"></script>    
+</head>
+<body>
+    <h2>MÉTODO DA BISSECÇÃO (OU DA DICOTOMIA)</h2>   
+
+    <label>FUNÇÃO f(x): </label>    Campo para o usuário digitar a função
+    <input type="text" id="func" value="Math.pow(x,3)-20"><br><br>    
+
+    <label>Extremo a do intervalo [a,b]: </label>    
+    <input type="number" id="a" value="2"><br><br>
+
+    <label>Extremo b do intervalo [a,b]: </label>
+    <input type="number" id="b" value="3"><br><br>
+
+    <label>Erro alvo (convergência): </label>            Campo para definir o erro
+    <input type="text" id="erro" value="0.0001"><br><br>   
+
+    <label>Número máximo de iterações: </label>
+    <input type="number" id="max" value="50"><br><br>
+
+    <button onclick="calcular()">CALCULAR</button>     chama a função calcular() no JS
+
+    <h3>Resultado:</h3>
+    <table border="1" id="tabela">   
+            <tr>
+                <th>Iteração</th>    numero da iteracao
+                <th>x0</th>      valor de x0
+                <th>x1</th>     valor de x1
+                <th>x2 (solução)</th>     valor de x2
+                <th>Erro</th>       erro
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

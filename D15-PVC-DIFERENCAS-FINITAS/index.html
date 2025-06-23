@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PVC - Diferenças Finitas</title>
+    <style>
+        input { margin: 5px; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Resolução de PVC de Ordem 2 - Método das Diferenças Finitas</h2>
+
+    <label>FUNÇÃO P(x): <input type="text" id="px" placeholder="Ex: 2*x"></label><br>
+    <label>FUNÇÃO Q(x): <input type="text" id="qx" placeholder="Ex: 1"></label><br>
+    <label>FUNÇÃO w(x): <input type="text" id="wx" placeholder="Ex: x"></label><br><br>
+
+    <label>x0: <input type="text" id="x0" placeholder="Ex: 0"></label>
+    <label>y0: <input type="text" id="y0" placeholder="Ex: 0"></label><br>
+    <label>xn: <input type="text" id="xn" placeholder="Ex: 1"></label>
+    <label>yn: <input type="text" id="yn" placeholder="Ex: -1"></label><br>
+    <label>Intervalo h: <input type="text" id="h" placeholder="Ex: 0.1"></label><br><br>
+
+    <button onclick="calcular()">CALCULAR</button>
+
+    <h3>Resultado:</h3>
+    <div id="resultado"></div>
+
+    <script src="pvc.js"></script>
+</body>
+</html>

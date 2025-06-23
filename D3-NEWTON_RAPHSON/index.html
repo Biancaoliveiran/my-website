@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Método de Newton-Raphson</title>
+</head>
+<body>
+    <h2>Método de Newton-Raphson</h2>
+    FUNÇÃO f(x): <input type="text" id="funcao" value="Math.pow(x,3)-20"><br><br>
+    DERIVADA f'(x): <input type="text" id="derivada" value="3*Math.pow(x,2)"><br><br>
+x inicial: <input type="text" id="x0" value="1"><br><br>
+Convergência alvo (ea): <input type="text" id="erro" value="0.001"><br><br>
+Máximo de iterações: <input type="text" id="max_iter" value="50"><br><br>
+    <button type="button" onclick="newtonRaphson()">CALCULAR</button>
+    <pre id="resultado"></pre>
+    <script src="newton_raphson.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Runge-Kutta 2ª Ordem - PVI</title>
+  <script src="runge_kutta.js"></script>
+</head>
+<body>
+  <h2>Runge-Kutta de 2ª Ordem - Resolução de PVI</h2>
+
+  <label>Função g(x, y):</label>
+  <input type="text" id="gx" placeholder="Ex: x + y"><br><br>
+
+  <label>x0:</label>
+  <input type="number" id="x0" step="any">
+  <label>y0:</label>
+  <input type="number" id="y0" step="any"><br><br>
+
+  <label>xn:</label>
+  <input type="number" id="xn" step="any"><br><br>
+
+  <label>Intervalo h:</label>
+  <input type="number" id="h" step="any"><br><br>
+
+  <button onclick="resolverRK2()">CALCULAR</button>
+
+  <h3>Resultado:</h3>
+  <table border="1" id="resultado">
+    <tr>
+      <th>i</th>
+      <th>x(i)</th>
+      <th>y(i)</th>
+    </tr>
+  </table>
+</body>
+</html>
